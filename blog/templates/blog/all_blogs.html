@@ -1,1 +1,17 @@
-Hello Bloggger
+<h1>Blog</h1>
+<h2>Ashish Blogs</h2>
+{% for Blog in Blogs %}
+
+{% if Blog.url %}
+<a href="{{ Blog.title }}"> 
+{% endif %} 
+    <h3>{{ Blog.title }}</h3> 
+{% if Blog.url %}
+</a> 
+{% endif %}
+
+<h5>{{ Blog.post_date }}</h5>
+
+<p>{{ Blog.description }}</p>
+
+{% endfor %}
